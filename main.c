@@ -1,9 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "linkedlist.h"
+
 int main()
 {
+    number_of_lists = 0;
     data_list* root = root_init();
+    number_of_lists++;
     print_home();
     return 0;
 }
@@ -27,7 +30,23 @@ data_list* root_init(void)
 }
 int add_to_list(data_list* root)
 {
+    int index = 0;
+        char buffer [255];
+        printf("add to list: ");
+        scanf("%s",&buffer);
+        data_list* current=root;
+        data_list* prev;
+        while(current->next != NULL){
 
+            prev=current;
+            current = current->next;
+            index++;
+
+        }
+        strcpy(current->data,buffer);
+        current->previous = prev;
+        current->next = malloc(sizeof(data_list));
+        current->next->next = NULL;
 }
 int insert_to_list(data_list* root)
 {
