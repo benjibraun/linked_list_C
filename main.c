@@ -8,6 +8,8 @@ int main()
     data_list* root = root_init();
     number_of_lists++;
     print_home();
+    add_to_list(root);
+    print(root);
     return 0;
 }
 void print_home(void)
@@ -48,8 +50,19 @@ int add_to_list(data_list* root)
         current->next = malloc(sizeof(data_list));
         current->next->next = NULL;
 }
+
 int insert_to_list(data_list* root)
 {
 
+}
+
+int print(data_list* root){
+    data_list* current=root;
+    while(current->next != NULL){
+        printf("%s\n", current->data);
+        printf("%p\n", current->previous);
+        printf("%p\n", current->next);
+        current = current->next;
+        }
 }
 
