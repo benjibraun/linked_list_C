@@ -9,7 +9,7 @@ int main()
     number_of_lists++;
     print_home();
     add_to_list(root);
-    print(root);
+    print_list(root);
     return 0;
 }
 void print_home(void)
@@ -56,7 +56,7 @@ int insert_to_list(data_list* root)
 
 }
 
-int print(data_list* root){
+int print_list(data_list* root){
     data_list* current=root;
     while(current->next != NULL){
         printf("%s\n", current->data);

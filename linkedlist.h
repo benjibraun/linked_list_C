@@ -18,6 +18,6 @@ void print_home(void);
 data_list* root_init(void);
 int add_to_list(data_list*);
 int insert_to_list(data_list*);
-int print(data_list*);
+int print_list(data_list*);
 
 #endif // LINKEDLIST_H_INCLUDED
